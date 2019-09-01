@@ -5,24 +5,24 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class HelloWorldApp extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       username: ''
-    }
+    };
   }
 
   AddName = () => {
     this.setState({
       username: 'zul'
-    })
-  }
+    });
+  };
 
   RemoveName = () => {
     this.setState({
       username: ''
-    })
-  }
+    });
+  };
 
   render() {
     return (
@@ -30,29 +30,18 @@ export default class HelloWorldApp extends Component {
         {/* <Text>Hello, world!</Text>
         <Text>Hello, world!</Text>
         <Text>Hello, world!</Text> */}
+        <Button title="Solid Button" />
         <Button
-          title="Solid Button" />
-        <Button
-          icon={
-            <Icon
-              name={'arrow-right'}
-              size={15}
-              color={'white'}
-            />}
+          icon={<Icon name={'arrow-right'} size={15} color={'white'} />}
           title=" kanan"
         />
 
         <Card>
           <Text>UserName: {this.state.username}</Text>
         </Card>
-        <Button
-          title="Menambah nama"
-          onPress={this.AddName} />
+        <Button title="Menambah nama" onPress={this.AddName} />
 
-        <Button
-          title="Menghapus nama"
-          onPress={this.RemoveName}
-        />
+        <Button title="Menghapus nama" onPress={this.RemoveName} />
       </View>
     );
   }
